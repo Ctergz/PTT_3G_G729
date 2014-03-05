@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/contacticon2" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#bf555555"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/roundlist_single"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:hint="@string/contact_name"
+            android:maxLength="20"
+            android:paddingLeft="4dp"
+            android:textColor="@android:color/white"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_alignLeft="@+id/et_name"
+            android:layout_below="@+id/et_name"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundlist_single"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="@string/contact_num"
+            android:inputType="number"
+            android:maxLength="20"
+            android:paddingLeft="4dp"
+            android:textColor="@android:color/white"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/save"
+            android:background="@drawable/button_login_new"
+            android:textColor="@android:color/background_dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_phone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:text="@string/contact_save" />
+
+    </RelativeLayout>
+
+</LinearLayout>

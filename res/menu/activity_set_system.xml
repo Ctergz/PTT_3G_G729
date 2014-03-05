@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/set_system_back_item"
+        android:icon="@drawable/backicon"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/menu_return"/>
+
+</menu>

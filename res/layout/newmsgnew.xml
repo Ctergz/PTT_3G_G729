@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/messageicon2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#bf555555"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:id="@+id/scroview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/selectcontact"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/background_dark"
+                            android:background="@drawable/button_login_new"
+                            android:text="@string/selectcontact" />
+
+                        <EditText
+                            android:id="@+id/newmsg_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/roundlist_single"
+                            android:hint="@string/newmsg_name"
+                            android:inputType="number"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@android:color/white"
+                            android:maxLength="20" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/newmsg_text"
+                            android:layout_width="fill_parent"
+                            android:layout_height="120dp"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/roundlist_single"
+                            android:hint="@string/newmsg_text"
+                            android:inputType="textMultiLine"
+                            android:maxLength="120" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/sendnewmsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@android:color/background_dark"
+                    android:background="@drawable/button_login_new"
+                    android:text="@string/sendnewmsg" />
+
+                <Button
+                    android:id="@+id/exitnewmsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@android:color/background_dark"
+                    android:background="@drawable/button_login_new"
+                    android:text="@string/exitnewmsg" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

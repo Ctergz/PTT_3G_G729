@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/log_delete_all"
+        android:icon="@drawable/deleteallicon"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/log_delete_all"/>
+    <item
+        android:id="@+id/log_back"
+        android:icon="@drawable/backicon"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/menu_return"/>
+
+</menu>

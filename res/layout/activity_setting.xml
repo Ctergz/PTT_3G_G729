@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/background_dark" >
+
+    <ScrollView
+        android:id="@+id/layout_info"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip" >
+
+            <RelativeLayout
+                android:id="@+id/relativelayout_setting_register"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="30dip"
+                android:background="@drawable/roundlist_single"
+                android:paddingLeft="10dip"
+                android:paddingRight="18dip" >
+                
+                <TextView
+                    android:id="@+id/et_setting_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:text="@string/setting_register"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <FrameLayout
+                    android:id="@+id/framelayout_setting_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/btn_userreference_arrow_normal" >
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativelayout_setting_alertring"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/roundlist_single"
+                android:paddingLeft="10dip" >
+
+                <TextView
+                    android:id="@+id/et_setting_alertring"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:text="@string/setting_alertring"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                 <FrameLayout
+                     android:id="@+id/framelayout_setting_alertring"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignRight="@+id/et_setting_alertring"
+                     android:layout_alignTop="@+id/et_setting_alertring"
+                     android:layout_marginRight="19dp"
+                     android:background="@drawable/btn_userreference_arrow_normal" >
+                 </FrameLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativelayout_setting_talking"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/roundlist_single"
+                android:paddingLeft="10dip" >
+
+                <TextView
+                    android:id="@+id/et_setting_talking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:text="@string/setting_talking"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                 <FrameLayout
+                     android:id="@+id/framelayout_setting_talking"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignRight="@+id/et_setting_talking"
+                     android:layout_alignTop="@+id/et_setting_talking"
+                     android:layout_marginRight="19dp"
+                     android:background="@drawable/btn_userreference_arrow_normal" >
+                 </FrameLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativelayout_setting_system"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/roundlist_single"
+                android:paddingLeft="10dip" >
+
+                <TextView
+                    android:id="@+id/et_setting_system"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:text="@string/setting_system"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                 <FrameLayout
+                     android:id="@+id/framelayout_setting_system"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignRight="@+id/et_setting_system"
+                     android:layout_alignTop="@+id/et_setting_system"
+                     android:layout_marginRight="21dp"
+                     android:background="@drawable/btn_userreference_arrow_normal" >
+                 </FrameLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

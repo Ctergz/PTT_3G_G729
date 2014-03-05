@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:id="@+id/dail_back"
+          android:icon="@drawable/backicon"
+          android:title="@string/menu_return"
+          android:showAsAction="ifRoom|withText" />
+</menu>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="hb_icon">false</bool><!--用来切换HB图标-同时修改startactivity中的背景和manifest中的icon-->
+</resources>

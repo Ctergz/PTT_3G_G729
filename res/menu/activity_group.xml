@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/group_refresh_item"
+        android:icon="@drawable/freshicon"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/group_fresh_groupmember"/>
+    <item
+        android:id="@+id/group_back_item"
+        android:icon="@drawable/backicon"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/menu_return"/>
+
+</menu>
