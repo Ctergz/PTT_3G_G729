@@ -296,4 +296,10 @@ public class SipProxy implements InterfaceSip {
 		Log.d(LOG_TAG, "SipProxy.ReuqestSendDTMF  " + digit);
 		return CallJni.sendDTMF(digit);
 	}
+
+    @Override
+    public int RequestSendCommonMsg(String msg) {
+        Log.d(LOG_TAG, "SipProxy.RequestSendCommonMsg  " + msg);
+        return CallJni.sendCommonMessage(msg);
+    }
 }

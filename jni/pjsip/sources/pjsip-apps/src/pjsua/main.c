@@ -47,8 +47,8 @@ static const JNINativeMethod gMethods[] =
     { "applyPttRight", "(Ljava/lang/String;)I", (void*) apply_ptt_right },
     { "openPtt", "()I", (void*) open_ptt },
     { "hoInd", "(Ljava/lang/String;)I", (void*) ho_ind },
-    { "getGroupNo", "(Ljava/lang/String;)I", (void*) get_group_number }/*,
-    { "sendCommonMessage", "()I", (void*) send_common_message }*/
+    { "getGroupNo", "(Ljava/lang/String;)I", (void*) get_group_number },
+    { "sendCommonMessage", "(Ljava/lang/String;)I", (void*) send_common_message }
 };
 
 

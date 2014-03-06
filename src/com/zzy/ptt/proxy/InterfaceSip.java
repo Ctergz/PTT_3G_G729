@@ -51,5 +51,6 @@ public interface InterfaceSip {
 	
 	public int RequestSendDTMF(String digit);
 
-
+	public int RequestSendCommonMsg(String msg);
+	
 }

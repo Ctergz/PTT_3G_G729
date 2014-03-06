@@ -6665,7 +6665,6 @@ JNIEXPORT jint JNICALL open_ptt(JNIEnv* env, jclass cls)
 }
 
 //added by lxd
-/*
 JNIEXPORT jint JNICALL send_common_message(JNIEnv* env, jclass cls, jstring msg)
 {
 	char *utf_chars;
@@ -6676,9 +6675,10 @@ JNIEXPORT jint JNICALL send_common_message(JNIEnv* env, jclass cls, jstring msg)
 	pjsip_tx_data 	*tdata;
 	pjsip_endpoint 	*endpt;
 	pj_str_t 		dst_uri, type, subtype, body;
-	char tmp[64], msg[512];
+	char tmp[64], common_msg[512];
 
-	utf_chars = (char *)(*env)->GetStringUTFChars(env, msg, 0);
+	//utf_chars = (char *)(*env)->GetStringUTFChars(env, msg, 0);
+	//PJ_LOG(3, (THIS_FILE, "sxsexe----->send_common_message utf_chars : %s", utf_chars));
 
 	if (pjsua_acc_get_count() == 0)
 	        return PJ_EINVALIDOP;
@@ -6689,10 +6689,69 @@ JNIEXPORT jint JNICALL send_common_message(JNIEnv* env, jclass cls, jstring msg)
 	pjsip_method_init_np(&method, &str_method);
 
 	pjsua_acc_get_info(current_acc, &info);
+	if (pj_ansi_strchr(info.acc_uri.ptr, '@'))
+    {
+        utf_chars = (char *)(*env)->GetStringUTFChars(env, msg, 0);
+		PJ_LOG(3, (THIS_FILE, "sxsexe----->send_common_message utf_chars : %s", utf_chars));
+        pj_ansi_sprintf(tmp, "sip:%s%s", "98765421", pj_ansi_strchr(info.acc_uri.ptr, '@'));
+        (*env)->ReleaseStringUTFChars(env, msg, utf_chars);
+    }
+    else
+    {
+        return PJ_ENOTFOUND;
+    }
 
+    dst_uri = pj_str(tmp);
+    status = pjsua_acc_create_request(current_acc, &method, &dst_uri, &tdata);
+    
+    type = pj_str(ZZY_PTT_MSG_TYPE);
+    subtype = pj_str(ZZY_PTT_MSG_SUBTYPE);
+	
+	/*pj_bzero(msg, 512);
+    switch(action)
+    {
+        case ACTION_GET_MEMBER:
+            pj_ansi_strcpy(msg, "req:memberInfo\r\n");    
+        break;
+        case ACTION_APPLY_PTT_RIGHT:
+            pj_ansi_strcpy(msg, "req:ptt-request\r\n");
+        break;
+        case ACTION_CANCEL_PTT_RIGHT:
+            pj_ansi_strcpy(msg, "req:ptt-cancel\r\n");
+        break;
+        case ACTION_GET_GRP_NUMBER:
+            pj_ansi_strcpy(msg, "req:groupInfo\r\n");
+        break;
+        default:
+            PJ_LOG(3, (THIS_FILE, "The code should never run here, Error occurs!!!"));
+        break;
+        
+    }*/
+    PJ_LOG(3, (THIS_FILE, "sxsexe----->send_common_message : %s", common_msg));
+    
+    body = pj_str(common_msg);
+    /* Add message body */
+    tdata->msg->body = pjsip_msg_body_create( tdata->pool, &type, &subtype, &body);
+
+    if (tdata->msg->body == NULL) {
+        pjsua_perror(THIS_FILE, "Unable to create msg body", PJ_ENOMEM);
+        return PJ_ENOMEM;
+    }
+
+    status = pjsip_endpt_send_request(endpt, tdata, -1, NULL, NULL);
+    if (status != PJ_SUCCESS) {
+        pjsua_perror(THIS_FILE, "Unable to send request", status);
+        return status;
+    }
+
+#ifdef LXD_DEBUG_ON
+    PJ_LOG(3,(THIS_FILE, "send_message has been over"));
+#endif
+
+    return PJ_SUCCESS;
 
 }
-*/
+
 JNIEXPORT jint JNICALL get_group_number(JNIEnv* env, jclass cls, jstring num)
 {
     char *utf_chars;
