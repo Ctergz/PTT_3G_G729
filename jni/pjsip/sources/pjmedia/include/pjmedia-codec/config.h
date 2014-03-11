@@ -48,7 +48,10 @@
 #ifndef PJMEDIA_HAS_L16_CODEC
 #   define PJMEDIA_HAS_L16_CODEC    1
 #endif
-
+/*added by xiaodong.lxd*/
+#ifndef PJMEDIA_HAS_G729_CODEC
+#   define PJMEDIA_HAS_G729_CODEC    1
+#endif
 
 /**
  * Unless specified otherwise, GSM codec is included by default.
