@@ -266,5 +266,5 @@
     <string name="aboutv3"></string>
     <string name="aboutv4"></string>
     <string name="aboutv5">build time:</string>
-    <string name="version_welcome">"<i><u>V3.2.0 </u></i>"</string>
+    <string name="version_welcome">"<i><u>V3.3.0 </u></i>"</string>
 </resources>

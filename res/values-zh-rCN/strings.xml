@@ -292,6 +292,6 @@
     <string name="aboutv4"></string>
     <string name="aboutv5">发布时间：</string>
     <string name="ipbind">PTT切换至  ：</string>
-    <string name="version_welcome">"<i><u>V3.2.0 </u></i>"</string>
+    <string name="version_welcome">"<i><u>V3.3.0 </u></i>"</string>
 
 </resources>
