@@ -43,6 +43,7 @@
     <!-- sms -->
     <string name="sms_send">Send</string>
     <!-- setting page -->
+    <string name="setting_gis">Gis Setting</string>
     <string name="setting_talking">Call Setting</string>
     <string name="setting_register">Register Setting</string>
     <string name="setting_register_item">Register</string>
@@ -68,6 +69,14 @@
     <string name="setting_register_pw">register need password!</string>
     <string name="setting_register_pw_false">password wrong！</string>
     <string name="setting_debug_switch">Debug Model</string>
+    <string name="setting_gis_open">Use Gis</string>
+    <string name="setting_gis_open_checkbox">Open Gis</string>
+    <string name="setting_gis_chose">Chose Gis</string>
+    <string name="setting_gis_chose_item1">Mobile</string>
+    <string name="setting_gis_chose_item2">Gps</string>
+    <string name="setting_gis_send_time">Gis send time</string>
+    <string name="setting_gis_start">Start</string>
+    <string name="setting_gis_stop">Stop</string>
     <!-- notification -->
     <string name="notify_title">PTT</string>
     <string name="notify_content">PTT</string>
@@ -266,5 +275,5 @@
     <string name="aboutv3"></string>
     <string name="aboutv4"></string>
     <string name="aboutv5">build time:</string>
-    <string name="version_welcome">"<i><u>V3.3.0 </u></i>"</string>
+    <string name="version_welcome">"<i><u>V3.4.0 </u></i>"</string>
 </resources>

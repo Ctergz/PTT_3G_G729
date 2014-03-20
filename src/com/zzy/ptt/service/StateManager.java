@@ -61,6 +61,7 @@ public class StateManager {
 
 	private static PowerManager.WakeLock sPttWakeLock;
 
+	@SuppressWarnings("deprecation")
 	private static KeyguardManager.KeyguardLock sPttKeyguardLock;
 
 	private static boolean bEarphone;
@@ -70,6 +71,7 @@ public class StateManager {
 	private static EnumRegByWho regStarter;
 
 	// edit by wangjunhui
+	@SuppressWarnings("deprecation")
 	public static void initNotification(Context context, String ticker,
 			String title, String msg) {
 		StateManager.context = context;
@@ -89,6 +91,7 @@ public class StateManager {
 		return currentRegisterState;
 	}
 
+	@SuppressWarnings("deprecation")
 	public static void setCurrentRegState(EnumLoginState state) {
 
 		Log.d("StateManager", "setCurrentRegState state : " + state
@@ -258,6 +261,7 @@ public class StateManager {
 		}
 	};
 
+	@SuppressWarnings("deprecation")
 	public static void acquireWakeLock(Context context) {
 
 		Log.d(LOG_TAG, ">>>>>>>accquire cpu wake lock");
@@ -280,6 +284,7 @@ public class StateManager {
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	public static void releaseWakeLock() {
 		Log.d(LOG_TAG, ">>>>>>>release cpu wake lock");
 		if (sPttWakeLock != null && sPttWakeLock.isHeld()) {

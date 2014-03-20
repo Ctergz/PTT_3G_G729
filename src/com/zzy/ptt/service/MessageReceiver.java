@@ -47,6 +47,7 @@ public class MessageReceiver extends BroadcastReceiver {
 	
 	private static boolean isSend= false;
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		cl = new MessageCl(context);

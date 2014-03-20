@@ -33,7 +33,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
@@ -63,6 +62,7 @@ import com.zzy.ptt.util.PTTUtil;
  * @author Administrator
  * 
  */
+@SuppressWarnings("deprecation")
 public class CallLogTabActivity extends TabActivity implements TabContentFactory,
 		OnTabChangeListener {
 

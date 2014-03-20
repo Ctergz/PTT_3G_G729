@@ -44,6 +44,12 @@ public class PTTConstant {
 	public static final String SP_AUTOREGISTER = "PTT_SP_AUTOREGISTER";
 	public static final String SP_TEST_GROUP_NUM = "PTT_SP_GROUPNO";
 	public static final String SP_CURR_GRP_NUM = "PTT_SP_CURR_GRP_NUM";
+	public static final String SP_OPEN_GIS = "SP_OPEN_GIS";
+	public static final String SP_GIS_MOBILE = "SP_GIS_MOBILE";
+	public static final String SP_GIS_GPS = "SP_GIS_GPS";
+	public static final String SP_GIS_LOCATION_MODE = "SP_GIS_LOCATION_MODE";
+	public static final String SP_GIS_LOCATION_START = "SP_GIS_LOCATION_START";
+	public static final String SP_GIS_LOCATION_SEND_TIME = "SP_GIS_LOCATION_SEND_TIME";
 
 	/* setting key and item id */
 	public static final String SETTING_DISPATCH_KEY = "SETTING_DISPATHC_KEY";
@@ -52,6 +58,7 @@ public class PTTConstant {
 	public static final int SETTING_ITEM_ALERTRING = 2;
 	public static final int SETTING_ITEM_SYSTEM = 3;
 	public static final int SETTING_ITEM_GROUP = 4;
+	public static final int SETTING_ITEM_GIS = 5;
 
 	/* intent key */
 	public static final String KEY_REGISTER_STATE = "REGISTER_STATE";

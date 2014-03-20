@@ -46,7 +46,7 @@ import com.zzy.ptt.util.PTTUtil;
 public class SettingActivity extends BaseActivity implements OnClickListener {
 	private LayoutInflater inflater;
 	
-	private RelativeLayout registerSetLayout,ringtongSetLayout,talkingSetLayout,systemSetLayout;
+	private RelativeLayout registerSetLayout,ringtongSetLayout,talkingSetLayout,gisSetLayout,systemSetLayout;
 	
 	public static SettingActivity instance = null;
 
@@ -60,11 +60,13 @@ public class SettingActivity extends BaseActivity implements OnClickListener {
 		registerSetLayout = (RelativeLayout) findViewById(R.id.relativelayout_setting_register);
 		ringtongSetLayout = (RelativeLayout) findViewById(R.id.relativelayout_setting_alertring);
 		talkingSetLayout = (RelativeLayout) findViewById(R.id.relativelayout_setting_talking);
+		gisSetLayout = (RelativeLayout) findViewById(R.id.relativelayout_setting_gis);
 		systemSetLayout = (RelativeLayout) findViewById(R.id.relativelayout_setting_system);
 		
 		registerSetLayout.setOnClickListener(this);
 		ringtongSetLayout.setOnClickListener(this);
 		talkingSetLayout.setOnClickListener(this);
+		gisSetLayout.setOnClickListener(this);
 		systemSetLayout.setOnClickListener(this);
 		
 		inflater = LayoutInflater.from(this);
@@ -193,6 +195,11 @@ public class SettingActivity extends BaseActivity implements OnClickListener {
 			Intent intenttalking = new Intent(this, SettingDetailActivity.class);
 			intenttalking.putExtra(PTTConstant.SETTING_DISPATCH_KEY, 0);
 			startActivity(intenttalking);
+			break;
+		case R.id.relativelayout_setting_gis:
+			Intent intentgis = new Intent(this, SettingDetailActivity.class);
+			intentgis.putExtra(PTTConstant.SETTING_DISPATCH_KEY, 5);
+			startActivity(intentgis);
 			break;
 		case R.id.relativelayout_setting_system:
 			Intent intentsystem = new Intent(this, SettingDetailActivity.class);

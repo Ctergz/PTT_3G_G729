@@ -43,6 +43,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.zzy.ptt.R;
+import com.zzy.ptt.application.MyApplication;
 import com.zzy.ptt.exception.PTTException;
 import com.zzy.ptt.jni.JniCallback;
 import com.zzy.ptt.jni.JniManager;
@@ -166,6 +167,7 @@ public class PTTService extends Service {
 	}
 
 	private void checkAR() {
+		@SuppressWarnings("deprecation")
 		boolean bEar = audioManager.isWiredHeadsetOn();
 		StateManager.setbEarphone(bEar);
 	}
@@ -254,6 +256,7 @@ public class PTTService extends Service {
 		StateManager.exitFlag = false;
 	}
 
+	@SuppressWarnings("deprecation")
 	private void showNotification() {
 		Notification notification = StateManager.getNotification();
 		// notification.flags |= Notification.FLAG_AUTO_CANCEL;
@@ -564,6 +567,7 @@ public class PTTService extends Service {
 		return true;
 	}
 
+	@SuppressWarnings("deprecation")
 	public synchronized void playPttAlert(Context context, final int pttAlertType) {
 
 		pttUtil.printLog(bDebug, LOG_TAG, ">>>>>>>>>playPttAlert");
@@ -681,6 +685,7 @@ public class PTTService extends Service {
 		pttManager.bPttAlertPlayed = (pttAlertType == PTTConstant.PTT_ALERT_ACCEPT);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onStart(Intent intent, int startId) {
 		pttUtil.printLog(bDebug, LOG_TAG, "PTTService.onStart");
@@ -693,7 +698,7 @@ public class PTTService extends Service {
 		super.onDestroy();
 
 		stopNotificationPicture();
-
+		((MyApplication) getApplication()).mLocationClient.stop();
 		StateManager.reset();
 		pttManager.clear();
 		callStateManager.clear();

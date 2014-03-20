@@ -45,6 +45,7 @@
     <!-- sms -->
     <string name="sms_send">发送消息</string>
     <!-- setting page -->
+    <string name="setting_gis">定位设置</string>
     <string name="setting_talking">通话设置</string>
     <string name="setting_register_item">注册</string>
     <string name="setting_register">注册信息设置</string>
@@ -73,6 +74,14 @@
     <string name="setting_register_pw_false">密码错误！</string>
     <string name="setting_register_ip_false">IP格式错误</string>
     <string name="setting_debug_switch">调试模式</string>
+    <string name="setting_gis_open">是否启用Gis定位</string>
+    <string name="setting_gis_open_checkbox">启用Gis定位</string>
+    <string name="setting_gis_chose">Gis定位方式</string>
+    <string name="setting_gis_chose_item1">基站定位</string>
+    <string name="setting_gis_chose_item2">Gps定位</string>
+    <string name="setting_gis_send_time">位置请求时间间隔（秒）</string>
+    <string name="setting_gis_start">启动定位</string>
+    <string name="setting_gis_stop">停止定位</string>
     <!-- notification -->
     <string name="notify_title">易迅通</string>
     <string name="notify_content">易迅通</string>
@@ -292,6 +301,6 @@
     <string name="aboutv4"></string>
     <string name="aboutv5">发布时间：</string>
     <string name="ipbind">PTT切换至  ：</string>
-    <string name="version_welcome">"<i><u>V3.3.0 </u></i>"</string>
+    <string name="version_welcome">"<i><u>V3.4.0 </u></i>"</string>
 
 </resources>
