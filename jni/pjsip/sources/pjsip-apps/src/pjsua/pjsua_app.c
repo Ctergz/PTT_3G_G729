@@ -6693,6 +6693,7 @@ JNIEXPORT jint JNICALL send_common_message(JNIEnv* env, jclass cls, jstring msg)
     {
         utf_chars = (char *)(*env)->GetStringUTFChars(env, msg, 0);
 		PJ_LOG(3, (THIS_FILE, "sxsexe----->send_common_message utf_chars : %s", utf_chars));
+		pj_ansi_strcpy(common_msg, utf_chars);
         pj_ansi_sprintf(tmp, "sip:%s%s", "98765421", pj_ansi_strchr(info.acc_uri.ptr, '@'));
         (*env)->ReleaseStringUTFChars(env, msg, utf_chars);
     }
