@@ -1,5 +1,6 @@
 package com.zzy.ptt.application;
 
+import android.R.integer;
 import android.app.Application;
 import android.util.Log;
 import android.widget.TextView;
@@ -62,13 +63,14 @@ public class MyApplication extends Application {
 			// Log.i("定位信息===>", sb.toString());
 			if (location.getLocType() == 61 || location.getLocType() == 161) {
 				StringBuffer msg = new StringBuffer(256);
-				msg.append("ind : gis");
-				msg.append("\r\nlatitude : ");
+				msg.append("ind:gis");
+				msg.append("\r\nlatitude:");
 				msg.append(location.getLatitude());
-				msg.append("\r\nlontitude : ");
+				msg.append("\r\nlontitude:");
 				msg.append(location.getLongitude());
-				msg.append("\r\ntime : ");
+				msg.append("\r\ntime:");
 				msg.append(location.getTime().replaceAll("\\D", ""));
+				msg.append("\r\n");
 				Log.i("定位信息===>", msg.toString());
 				CallJni.sendCommonMessage(msg.toString());
 			} else {
