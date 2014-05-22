@@ -3423,6 +3423,9 @@ static void on_pager2(pjsua_call_id call_id, const pj_str_t *from,
 		  PJ_LOG(3,(THIS_FILE, "sxsexe deal as receive m-Invite messsage, len %d", body->slen));
 		  do_receive_minvite_by_smessage(body->ptr, body->slen);
 	   }
+	   //lxd add : all unknown message, just send the message to Java Layer
+	      PJ_LOG(3,(THIS_FILE, "sxsexe received unknown message %.*s", body->slen, body->ptr));
+		  on_receive_unknown_message("unknown", body);
     }
 
     return;

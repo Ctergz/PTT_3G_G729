@@ -2192,6 +2192,15 @@ void do_receive_sms(const pj_str_t *from, const pj_str_t *body)
     jni_cb_receive_msg(from_number, body->ptr);
 }
 
+void on_receive_unknown_message(const char *from, const pj_str_t *body)
+{
+	PJ_LOG(3, (THIS_FILE, "sxsexe-->on_receive_unknown_message from %s, body : %.*s", 
+                from,
+                body->slen, body->ptr));
+				
+	jni_cb_receive_msg(from, body->ptr);
+}
+
  void do_receive_group_info(const char *msg_content, unsigned len, pj_bool_t b_regroup)
 {
     PJ_LOG(3, (THIS_FILE, "do_receive_group_info, content : %s", msg_content));
