@@ -3374,47 +3374,55 @@ static void on_pager2(pjsua_call_id call_id, const pj_str_t *from,
            //deal as receive group info
            PJ_LOG(3,(THIS_FILE, "deal as receive group info, body : %.*s", body->slen, body->ptr));
            do_receive_group_info(body->ptr+15, body->slen-15, PJ_FALSE);
+		   return;
        }
        if(!pj_ansi_strncmp("rsp:memberInfo\r\n", body->ptr, 16))
        {
            //deal as receive member info
            PJ_LOG(3,(THIS_FILE, "deal as receive member info, body : %.*s", body->slen, body->ptr));
            do_receive_member_info(body->ptr+16, body->slen-16);
+		   return;
        }
        if(!pj_ansi_strncmp("ind:re-groupInfo", body->ptr, 16))
        {
            //deal as receive re-group info
            PJ_LOG(3,(THIS_FILE, "deal as receive re-group info, body : %.*s", body->slen, body->ptr));
            do_receive_regroupInfo(body->ptr+17, body->slen-17);
+		   return;
        }
        if(!pj_ansi_strncmp("rsp:ptt-accept", body->ptr, 14))
        {
            //deal as receive ptt accept
            PJ_LOG(3,(THIS_FILE, "deal as receive ptt-accept, body : %.*s", body->slen, body->ptr));
            do_receive_ptt_rsp(PTT_STATUS_BUSY, body->ptr, body->slen);
+		   return;
        }
        if(!pj_ansi_strncmp("rsp:ptt-waiting", body->ptr, 15))
        {
            //deal as receive ptt waiting
            PJ_LOG(3,(THIS_FILE, "deal as receive ptt-waiting, body : %.*s", body->slen, body->ptr));
            do_receive_ptt_rsp(PTT_STATUS_WAITING, body->ptr, body->slen);
+		   return;
        }
        if(!pj_ansi_strncmp("rsp:ptt-reject", body->ptr, 14))
        {
            //deal as receive ptt-rejects
            PJ_LOG(3,(THIS_FILE, "deal as receive ptt-reject, body : %.*s", body->slen, body->ptr));
            do_receive_ptt_rsp(PTT_STATUS_REJECTED, body->ptr, body->slen);
+		   return;
        }
        if(!pj_ansi_strncmp("ind:ptt-forceCancel", body->ptr, 19))
        {
            //deal as receive ptt-forceCancel
            PJ_LOG(3,(THIS_FILE, "deal as receive ptt-forceCancel, body : %.*s", body->slen, body->ptr));
            do_receive_ptt_rsp(PTT_STATUS_CANCELED, body->ptr, body->slen);
+		   return;
        }
        if(!pj_ansi_strncmp("ind:ptt-forceRelease", body->ptr, 20))
        {
            //deal as receive ptt-forceRelease
            PJ_LOG(3,(THIS_FILE, "deal as receive ptt-forceRelease, body : %.*s", body->slen, body->ptr));
+		   return;
        }
        //lxd added
        if(!pj_ansi_strncmp("ind:call-info", body->ptr, 13))
@@ -3422,6 +3430,7 @@ static void on_pager2(pjsua_call_id call_id, const pj_str_t *from,
 		  //deal as mInvite
 		  PJ_LOG(3,(THIS_FILE, "sxsexe deal as receive m-Invite messsage, len %d", body->slen));
 		  do_receive_minvite_by_smessage(body->ptr, body->slen);
+		   return;
 	   }
 	   //lxd add : all unknown message, just send the message to Java Layer
 	      PJ_LOG(3,(THIS_FILE, "sxsexe received unknown message %.*s", body->slen, body->ptr));
